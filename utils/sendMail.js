@@ -4,7 +4,7 @@ require('dotenv').config();
 const contactTemplate = require("../Template/template")
 
 
-// console.log('send mail')
+console.log('send mail')
 
 
 let transporter = nodemailer.createTransport({
@@ -18,7 +18,7 @@ let transporter = nodemailer.createTransport({
 const sendEmail = async ( email, title, body, name, mobile ) => {
     const htmlContent = contactTemplate(name, email, mobile, body);
 
-    // console.log('mail data', email, title, body);
+    console.log('mail data', email, title, body, name, mobile);
     const mailOptions = { 
         from: `${email}`,      
         to: process.env.EMAIL_USER,

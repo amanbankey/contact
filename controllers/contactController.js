@@ -13,7 +13,7 @@ const sendContactMail = async (req, res) => {
         });
     }
     
-    await sendEmail(email, " " , message, name, mobile)
+    await sendEmail(email, "contact details" , message, name, mobile)
     res.status(200).json({
          success: true, message: "Mail sent successfully"
      });
